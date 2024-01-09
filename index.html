@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap">
+        <title>ToDo List</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="inicio">
+                <h1>TU LISTA<br /> DE<br /> TAREAS</h1>
+                <h2>AGREGA UNA NUEVA<br /> TAREA</h2>
+                <div class="container__add-task">
+                    <input type="text" id="input"
+                        class="container__add-task--input"
+                        onkeydown="handleKeyPress(event)">
+                    <button class="container__add-task--button"
+                        onclick="addTaskOnClick()">+</button>
+                </div>
+            </div>
+        </div>
+        <div id="task-list" class="task-list"></div>
+
+        <!-- Ventana emergente personalizada -->
+        <div id="custom-modal" class="modal">
+            <div class="modal-content">
+                <p>¿Estás seguro de que quieres eliminar esta tarea?</p>
+                <button id="confirm-delete">Sí</button>
+                <button id="cancel-delete">No</button>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

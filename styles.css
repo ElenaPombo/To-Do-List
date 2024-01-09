@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('escritorio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Jost', sans-serif;
+}
+
+.inicio h1 {
+    color: white;
+    text-align: center;
+    margin-left: -25px;
+    margin-top: 11%;
+    font-size: 25px;
+}
+
+.inicio h2 {
+    margin-top: 150px; /* Elimina el margen superior del subtítulo para alinearlo con el título */
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container__add-task--input {
+    width: 60%;
+    height: 40px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Evita que el usuario pueda redimensionar el área de descripción */
+}
+
+.container__add-task--input:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.task-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.task-container span[contenteditable="true"] {
+    display: inline-block;
+    width: calc(100% - 30px);
+    min-height: 20px;
+    border: none;
+    padding: 5px;
+    cursor: text;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.task {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+
+.container__add-task--button {
+    width: 40px;
+    height: 40px;
+    background-color: #F3D7A7;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.task-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.task-options button {
+    margin-left: 5px;
+    cursor: pointer;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    text-decoration-color: black; /* Color de la línea a través del texto */
+    text-decoration-thickness: 2px; /* Grosor de la línea a través del texto */
+    color: black; /* Color del texto completado */
+}
+/* ... (resto de tu código CSS actual) */
+
+/* Estilos para la ventana emergente personalizada */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+}
+
+#confirm-delete, #cancel-delete {
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media Query para pantallas de escritorio (ancho mínimo de 768px) */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+    }
+
+    .container__add-task--input {
+        width: 80%; /* Ajusta el ancho del campo de entrada según tus necesidades */
+    }
+
+    .task-container {
+        width: 80%; /* Ajusta el ancho de los contenedores de tarea según tus necesidades */
+    }
+
+    /* ... (otros estilos específicos para escritorio) */
+
+    .inicio h1 {
+        margin-top: 6%; /* Cambié la coma por un punto aquí */
+    
+        margin-left: -5%;
+    }
+}
